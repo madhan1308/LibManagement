@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="BookId" />
+    </Key>
+    <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBNnumber" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="BookName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="BookDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="BookLanguage" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Categories" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Publisher" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="PublishedYear" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="LMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>
